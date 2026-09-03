@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#080706" />
+  <title>Our Little Monthsary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="app" aria-label="Monthsary scrapbook">
+
+    <!-- Ambient background -->
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <!-- Intro -->
+    <section id="intro" class="scene active">
+      <p class="eyebrow">POV: It's our 3rd monthsary hehe
+      </p>
+      <button id="startButton" class="start-button" type="button" aria-label="Open your surprise">
+        <span class="start-small">I made this for you
+          my cute baby:>
+        </span>
+        <span class="start-title">♡</span>
+        <span class="start-hint">click to open</span>
+      </button>
+    </section>
+
+    <!-- Envelope / flower card -->
+    <section id="flowerScene" class="scene">
+      <p class="scene-label">Hi babi, I made this bouquet for you! :P</p>
+
+      <button id="bouquetButton" class="bouquet-wrap" type="button" aria-label="Open the bouquet card">
+        <div class="flower f1">✿</div>
+        <div class="flower f2">✿</div>
+        <div class="flower f3">✿</div>
+        <div class="flower f4">✿</div>
+        <div class="flower f5">✿</div>
+        <div class="flower f6">✿</div>
+        <div class="leaf l1"></div>
+        <div class="leaf l2"></div>
+        <div class="leaf l3"></div>
+
+        <div class="card">
+          <div class="wax">♥</div>
+        </div>
+      </button>
+
+      <p class="click-hint">Click to open my awsom letter ♡</p>
+    </section>
+
+    <!-- Letter -->
+    <section id="letterScene" class="scene">
+      <article class="letter">
+        <div class="letter-mark">♡</div>
+        <p class="letter-small">To my favorite person,</p>
+        <p class="letter-text" id="letterText"></p>
+        <p class="letter-signature">— Love, me</p>
+      </article>
+      <button id="letterNext" class="ghost-button" type="button">keep going →</button>
+    </section>
+
+    <!-- Photo wall -->
+    <section id="wallScene" class="scene">
+      <p class="scene-label top-label">My favorite memories with you</p>
+
+      <div class="photo-wall" id="photoWall">
+        <!-- JS fills this from CONFIG.photos -->
+      </div>
+
+      <p class="wall-caption">I love you ♡</p>
+      <button id="wallNext" class="ghost-button bottom-button" type="button">one more thing →</button>
+    </section>
+
+    <!-- Final film strip -->
+    <section id="finalScene" class="scene">
+      <p class="scene-label">With you, everything feels right.</p>
+
+      <div class="film-frame">
+        <div class="film-holes top"></div>
+        <div class="film-photo-wrap">
+          <img id="finalPhoto" src="assets/photos/final.gif" alt="Our memory">
+        </div>
+        <div class="film-holes bottom"></div>
+      </div>
+
+      <p class="final-caption" id="finalCaption">Happy 3rdmonthsary, my love.</p>
+      <p class="final-subcaption">Thank you for being part of my life. my biggest prayer :C</p>
+
+      <button id="replayButton" class="ghost-button" type="button">replay ♡</button>
+    </section>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="assets/music/The 1975.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" class="music-button" type="button" aria-label="Toggle background music">
+      ♫ <span id="musicStatus">music off</span>
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
